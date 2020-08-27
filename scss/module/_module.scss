@@ -1,0 +1,36 @@
+/* module（共通アイテム） */
+/* --------------------------------- */
+/* title */
+.m-ttl {
+  font-size: rem(32);
+  font-weight: 900;
+}
+
+/* btn */
+.m-btn {
+  display: block;
+  font-size: rem(12);
+  color: $whiteFont-color;
+  background-color: $btn-color;
+}
+
+
+/* utility（便利スタイル） */
+/* --------------------------------- */
+.u-wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 rem(15);
+}
+
+@include mq(sp) {
+  .u-wrap {
+    padding: 0 rem(30);
+  }
+}
+
+@include mq(full) {
+  .u-wrap {
+    max-width: 1100px;
+  }
+}
