@@ -1,7 +1,7 @@
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   height: rem(97);
   background-color: #fff;
   box-shadow: 0px 2px 10px 2px #333333;
@@ -166,5 +166,25 @@
     }
 
     /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+  }
+}
+
+@include mq(sp) {
+  .header {
+    .header__inner {
+      .site__ttl {
+        font-size: rem(20);
+
+        .header__logo {
+          width: rem(30);
+          display: flex;
+          margin-right: rem(8);
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }

@@ -6,6 +6,13 @@
   font-weight: 600;
 }
 
+@include mq(tab) {
+  .m-ttl {
+    font-size: rem(24);
+    font-weight: 600;
+  }
+}
+
 /* btn */
 .m-btn {
   display: block;
@@ -21,6 +28,7 @@
 /* utility（便利スタイル） */
 /* --------------------------------- */
 .u-wrap {
+  width: 100%;
   max-width: rem(1000);
   margin: 0 auto;
 }
@@ -42,4 +50,11 @@
   opacity: .8;
   transition: .3s;
   cursor: pointer;
+}
+
+// 改行SP表示調整
+@include mq(tab) {
+  .br-sp {
+    display: none;
+  }
 }
