@@ -8,8 +8,13 @@
 
 @include mq(tab) {
   .m-ttl {
-    font-size: rem(24);
-    font-weight: 600;
+    font-size: rem(28);
+  }
+}
+
+@include mq(sp) {
+  .m-ttl {
+    font-size: rem(22);
   }
 }
 

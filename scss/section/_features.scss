@@ -1,0 +1,151 @@
+.features {
+  width: 100%;
+
+  &__ttl {
+    position: relative;
+    text-align: center;
+    margin-bottom: rem(100);
+  }
+
+  &__ttl::after {
+    content: "FEATURES";
+    position: absolute;
+    top: rem(50);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: rem(16);
+    color: $subFont-color;
+  }
+
+  &__contents {
+    margin-bottom: rem(93);
+
+    .features__subttl {
+      text-align: center;
+      font-size: rem(28);
+      font-weight: 600;
+      margin-bottom: rem(54);
+    }
+
+    .features__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .features__img {
+        width: 40%;
+      }
+
+      .features__txt {
+        width: 55%;
+
+        .features__txt-dt {
+          margin-bottom: rem(20);
+          font-size: rem(24);
+          font-weight: 600;
+          line-height: 2;
+        }
+
+        .features__txt-dd {
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  &__contents:nth-of-type(2) {
+    .features__wrap {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+
+}
+
+@include mq(tab) {
+  .features {
+    &__contents {
+      .features__subttl {
+        font-size: rem(24);
+      }
+
+      .features__wrap {
+        display: flex;
+        flex-direction: column;
+
+        .features__img {
+          width: 80%;
+          margin-bottom: rem(16);
+        }
+
+        .features__txt {
+          margin-left: 0;
+          width: 100%;
+
+          .features__txt-dt {
+            font-size: rem(20);
+          }
+        }
+      }
+    }
+
+    &__contents:nth-of-type(2) {
+      .features__wrap {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .features {
+    &__ttl {
+      margin-bottom: rem(60);
+    }
+
+    &__ttl::after {
+      top: rem(32);
+      font-size: rem(12);
+    }
+
+
+    &__contents {
+      .features__subttl {
+        margin-bottom: rem(16);
+        font-size: rem(22);
+      }
+
+      .features__wrap {
+        display: flex;
+        flex-direction: column;
+
+        .features__img {
+          width: 80%;
+          margin-bottom: rem(16);
+        }
+
+        .features__txt {
+          margin-left: 0;
+          width: 100%;
+
+          .features__txt-dt {
+            font-size: rem(20);
+            line-height: 1.5;
+          }
+
+          .features__txt-dd {
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+
+    &__contents:nth-of-type(2) {
+      .features__wrap {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
