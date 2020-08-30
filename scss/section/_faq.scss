@@ -1,0 +1,65 @@
+.faq {
+  padding: rem(70) 0;
+
+  &__ttl {
+    position: relative;
+    text-align: center;
+    margin-bottom: rem(100);
+  }
+
+  &__ttl::after {
+    content: "FAQ";
+    position: absolute;
+    top: rem(50);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: rem(16);
+    color: $subFont-color;
+  }
+
+  &__ac {
+    width: 100%;
+    max-width: rem(900);
+    margin: 0 auto;
+
+
+    .faq__ac-parent {
+      padding: rem(20);
+      text-align: center;
+      border: 1px solid #E5E5E5;
+      cursor: pointer;
+      transition: .3s;
+    }
+
+    .faq__ac-child {
+      padding: rem(20);
+      line-height: 1.5;
+      background-color: #F2F2F2;
+    }
+  }
+
+}
+
+@include mq(sp) {
+  .faq {
+    &__ttl {
+      margin-bottom: rem(60);
+    }
+
+    &__ttl::after {
+      top: rem(32);
+      font-size: rem(12);
+    }
+
+    &__ac {
+      .faq__ac-parent {
+        text-align: left;
+        padding: rem(16);
+      }
+
+      .faq__ac-child {
+        padding: rem(16);
+      }
+    }
+  }
+}
