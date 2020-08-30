@@ -1,14 +1,11 @@
 //・・・・・・・ フォントサイズ ・・・・・・・
 // 基本テキストカラー
-$baseFont-color: #333333;
+$baseFont-color: #333;
 // 装飾フォントカラー
 $whiteFont-color: #fff;
 
 
 //・・・・・・・ 背景 ・・・・・・・
-$bg-color: #F0F0F0;
-//フッター背景
-$footer-color: #525252;
 // オーバーレイ
 $overray-color: rgba(#222222, .6);
 
@@ -23,11 +20,12 @@ $hamburgerBg-color: rgba(#222222, .95);
 
 
 //・・・・・・・ ボタン ・・・・・・・
-$btn-color: #000000;
+$btn-color: #fff;
 
 
 //・・・・・・・ フォントファミリー ・・・・・・・
-$fontFamily:-apple-system,
+$fontFamily:'Noto Sans JP',
+-apple-system,
 BlinkMacSystemFont,
 Roboto,
 "Segoe UI",
@@ -59,4 +57,4 @@ sans-serif;
 $baseFontsize: 16;
 
 //・・・・・・・ ブレイクポイント ・・・・・・・
-$mq-breakpoints: ('xs': 320px, 'sp': 480px, 'tab': 600px, 'pc' : 1025px, 'full': 1100px);
+$mq-breakpoints: ('xs': 320px, 'sp': 480px, 'tab': 600px, 'pc': 1000px, 'full': 1200px);

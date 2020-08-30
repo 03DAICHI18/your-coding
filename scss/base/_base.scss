@@ -3,8 +3,9 @@
 /* base */
 /* --------------------------------- */
 body {
-  // line-height: ;
+  color: $baseFont-color;
   font-family: $fontFamily;
+  overflow-x: hidden;
 }
 
 img {

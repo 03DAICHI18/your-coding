@@ -6,9 +6,9 @@
 
 
 // ・・・・・・・ レスポンシブwidth設定（スマホ基準）・・・・・・・
-// setting.scss ： $mq-breakpoints: ('xs': 320px, 'sp': 480px, 'tab': 600px, 'pc' : 1025px, 'full': 1100px);
+// $mq-breakpoints: ('xs': 320px, 'sp': 480px, 'tab': 600px, 'pc': 1000px, 'full': 1200px);
 @mixin mq($breakpoint: sp) {
-  @media screen and (min-width: #{map-get($mq-breakpoints, $breakpoint)}) {
+  @media screen and (max-width: #{map-get($mq-breakpoints, $breakpoint)}) {
     @content;
   }
 }

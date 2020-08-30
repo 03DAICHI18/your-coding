@@ -11,7 +11,10 @@
 @import "module/module";
 
 // section：各セクション（ブロック単位のセクションで区切る）
+@import "section/header";
 @import "section/price";
+@import "section/contact";
+
 
 
 //////////////////////////////////////////////////////

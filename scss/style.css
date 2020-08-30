@@ -2,7 +2,9 @@
 /* base */
 /* --------------------------------- */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  color: #333;
+  font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", "Helvetica Neue", HelveticaNeue, YuGothic, "Yu Gothic Medium", "Yu Gothic", Verdana, Meiryo, sans-serif;
+  overflow-x: hidden;
 }
 
 img {
@@ -16,34 +18,194 @@ img {
 /* title */
 .m-ttl {
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 /* btn */
 .m-btn {
   display: block;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: #fff;
-  background-color: #000000;
+  padding: 0.6875rem 2.25rem;
+  border-radius: 5px;
+  background: #e23cc8;
+  background: linear-gradient(90deg, #e23cc8 0%, #6020b0 100%);
 }
 
 /* utility（便利スタイル） */
 /* --------------------------------- */
 .u-wrap {
-  width: 100%;
+  max-width: 62.5rem;
   margin: 0 auto;
-  padding: 0 0.9375rem;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1000px) {
   .u-wrap {
-    padding: 0 1.875rem;
+    padding: 0 2rem;
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (max-width: 600px) {
   .u-wrap {
-    max-width: 1100px;
+    padding: 0 1rem;
+  }
+}
+
+/* hover */
+.hover {
+  opacity: .8;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 6.0625rem;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px 2px #333333;
+  z-index: 2;
+}
+
+.header .header__inner {
+  max-width: 62.5rem;
+  height: 6.0625rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header__inner .site__ttl {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.header .header__inner .site__ttl .header__logo {
+  width: 2.9375rem;
+  display: flex;
+  margin-right: 1rem;
+}
+
+.header .header__inner .site__ttl .header__logo img {
+  width: 100%;
+}
+
+.header .header__inner .header__nav-in {
+  display: flex;
+}
+
+.header .header__inner .header__nav-in .header__nav-list:not(:nth-of-type(3)) {
+  margin-right: 2.875rem;
+}
+
+.header .hamburger-btn {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    padding: 0 1.875rem;
+    z-index: 3;
+    /***** 真ん中のバーガー線 *****/
+    /***** 上下のバーガー線 *****/
+    /***** メニューオープン時 *****/
+    /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+  }
+  .header .header__inner {
+    /***** メニューオープン時位置0にして画面内に *****/
+  }
+  .header .header__inner .m-btn {
+    display: none;
+  }
+  .header .header__inner .header__nav-in {
+    position: fixed;
+    /* メニューの位置マイナス指定で画面外に */
+    top: -18.75rem;
+    left: 0;
+    width: 100%;
+    height: 18.75rem;
+    /* メニューを縦に */
+    display: flex;
+    flex-direction: column;
+    color: #efefef;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: .3s;
+  }
+  .header .header__inner .header__nav-in .header__nav-list {
+    width: 100%;
+    height: 100%;
+    /* メニューテキスト位置をリスト内中心に */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .header .header__inner .header__nav-in .header__nav-list:not(:nth-of-type(3)) {
+    margin-right: 0;
+  }
+  .header .header__inner .header__nav-in.open {
+    position: absolute;
+    top: 6.0625rem;
+  }
+  .header .hamburger-btn {
+    display: block;
+    /* ボタンの大きさ  */
+    width: 40px;
+    height: 40px;
+    /* バーガーの線をボタン範囲の中心に配置 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 最前面に */
+    z-index: 10;
+  }
+  .header .btn-line {
+    /* 線の長さと高さ */
+    width: 100%;
+    height: 3px;
+    /* バーガー線の色 */
+    background-color: #333;
+    /* バーガー線の位置基準として設定 */
+    position: relative;
+    transition: .2s;
+  }
+  .header .btn-line::before,
+  .header .btn-line::after {
+    content: "";
+    /* 基準線と同じ大きさと色 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    transition: .5s;
+  }
+  .header .btn-line::before {
+    /* 上の線の位置 */
+    transform: translateY(-12px);
+  }
+  .header .btn-line::after {
+    /* 下の線の位置 */
+    transform: translateY(12px);
+  }
+  .header .btn-line.open {
+    /* 真ん中の線を透明に */
+    background-color: transparent;
+  }
+  .header .btn-line.open::before,
+  .header .btn-line.open::after {
+    content: "";
+    transition: .2s;
+  }
+  .header .btn-line.open::before {
+    /* 上の線を傾ける */
+    transform: rotate(45deg);
+  }
+  .header .btn-line.open::after {
+    /* 上の線を傾ける */
+    transform: rotate(-45deg);
   }
 }
 
@@ -77,4 +239,9 @@ th {
 
 .odd {
   background: #fefcf9;
+}
+
+.contact {
+  background: #05a5fa;
+  background: linear-gradient(90deg, #05a5fa 0%, #63fbd7 100%);
 }

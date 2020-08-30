@@ -1,0 +1,170 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: rem(97);
+  background-color: #fff;
+  box-shadow: 0px 2px 10px 2px #333333;
+  z-index: 2;
+
+  .header__inner {
+    max-width: rem(1000);
+    height: rem(97);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .site__ttl {
+      display: flex;
+      align-items: center;
+      font-size: rem(24);
+
+      .header__logo {
+        width: rem(47);
+        display: flex;
+        margin-right: rem(16);
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .header__nav-in {
+      display: flex;
+
+      .header__nav-list:not(:nth-of-type(3)) {
+        margin-right: rem(46);
+      }
+    }
+  }
+
+  // ハンバーガーボタン
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+@include mq(pc) {
+  .header {
+    padding: 0 rem(30);
+    z-index: 3;
+
+    .header__inner {
+      .m-btn {
+        display: none;
+      }
+
+      // gnavをハンバーガーメニュー仕様に変更
+      .header__nav-in {
+        position: fixed;
+        /* メニューの位置マイナス指定で画面外に */
+        top: rem(-300);
+        left: 0;
+        width: 100%;
+        height: rem(300);
+        /* メニューを縦に */
+        display: flex;
+        flex-direction: column;
+        color: #efefef;
+        background-color: rgba($color: #000000, $alpha: .8);
+        transition: .3s;
+
+        .header__nav-list {
+          width: 100%;
+          height: 100%;
+          /* メニューテキスト位置をリスト内中心に */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: rem(32);
+        }
+
+        .header__nav-list:not(:nth-of-type(3)) {
+          margin-right: 0;
+        }
+      }
+
+      /***** メニューオープン時位置0にして画面内に *****/
+      .header__nav-in.open {
+        position: absolute;
+        top: rem(97);
+      }
+    }
+
+    // ハンバーガーボタン
+    .hamburger-btn {
+      display: block;
+      /* ボタンの大きさ  */
+      width: 40px;
+      height: 40px;
+      /* バーガーの線をボタン範囲の中心に配置 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* 最前面に */
+      z-index: 10;
+    }
+
+    /***** 真ん中のバーガー線 *****/
+    .btn-line {
+      /* 線の長さと高さ */
+      width: 100%;
+      height: 3px;
+      /* バーガー線の色 */
+      background-color: #333;
+      /* バーガー線の位置基準として設定 */
+      position: relative;
+      transition: .2s;
+    }
+
+    /***** 上下のバーガー線 *****/
+    .btn-line::before,
+    .btn-line::after {
+      content: "";
+      /* 基準線と同じ大きさと色 */
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      transition: .5s;
+    }
+
+
+    .btn-line::before {
+      /* 上の線の位置 */
+      transform: translateY(-12px);
+    }
+
+
+    .btn-line::after {
+      /* 下の線の位置 */
+      transform: translateY(12px);
+    }
+
+    /***** メニューオープン時 *****/
+    .btn-line.open {
+      /* 真ん中の線を透明に */
+      background-color: transparent;
+    }
+
+    .btn-line.open::before,
+    .btn-line.open::after {
+      content: "";
+      transition: .2s;
+    }
+
+    .btn-line.open::before {
+      /* 上の線を傾ける */
+      transform: rotate(45deg);
+    }
+
+    .btn-line.open::after {
+      /* 上の線を傾ける */
+      transform: rotate(-45deg);
+    }
+
+    /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
+  }
+}
