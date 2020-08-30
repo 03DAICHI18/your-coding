@@ -131,7 +131,6 @@ img {
     /***** 真ん中のバーガー線 *****/
     /***** 上下のバーガー線 *****/
     /***** メニューオープン時 *****/
-    /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
   }
   .header .header__inner {
     /***** メニューオープン時位置0にして画面内に *****/
@@ -229,6 +228,12 @@ img {
 }
 
 @media screen and (max-width: 480px) {
+  .header {
+    height: 4.375rem;
+  }
+  .header .header__inner {
+    height: 4.375rem;
+  }
   .header .header__inner .site__ttl {
     font-size: 1.25rem;
   }
@@ -239,6 +244,10 @@ img {
   }
   .header .header__inner .site__ttl .header__logo img {
     width: 100%;
+  }
+  .header .header__inner .header__nav-in.open {
+    position: absolute;
+    top: 4.375rem;
   }
 }
 

@@ -164,14 +164,16 @@
       /* 上の線を傾ける */
       transform: rotate(-45deg);
     }
-
-    /**************** ここまで、ハンバーガーボタンのスタイリング ****************/
   }
 }
 
 @include mq(sp) {
   .header {
+    height: rem(70);
+
     .header__inner {
+      height: rem(70);
+
       .site__ttl {
         font-size: rem(20);
 
@@ -184,6 +186,11 @@
             width: 100%;
           }
         }
+      }
+
+      .header__nav-in.open {
+        position: absolute;
+        top: rem(70);
       }
     }
   }
