@@ -3,7 +3,7 @@ $(function () {
   var userAgent = navigator.userAgent; // ユーザーエージェント判定
 
   // 共通ボタン
-  var ac = $('.m-btn');
+  var ac = $('.m-btn , .blog__card');
   if (userAgent.indexOf("iPhone") >= 0 || userAgent.indexOf("iPad") >= 0 || userAgent.indexOf("Android") >= 0) {
     ac.on("touchstart", function () {
       $(this).addClass("hover");
