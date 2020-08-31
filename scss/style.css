@@ -66,7 +66,7 @@ img {
 
 /* hover */
 .hover {
-  opacity: .8;
+  opacity: .7;
   transition: .3s;
   cursor: pointer;
 }
@@ -114,6 +114,11 @@ img {
 
 .header .header__inner .header__nav-in {
   display: flex;
+  height: 100%;
+}
+
+.header .header__inner .header__nav-in .header__nav-list {
+  height: 100%;
 }
 
 .header .header__inner .header__nav-in .header__nav-list:not(:nth-of-type(3)) {
@@ -249,6 +254,15 @@ img {
     position: absolute;
     top: 4.375rem;
   }
+}
+
+.header__nav-list.gnav-hover {
+  background-color: #333;
+  color: #fff;
+  text-decoration: underline;
+  opacity: .6;
+  transition: .3s;
+  cursor: pointer;
 }
 
 .keyv {
@@ -595,6 +609,13 @@ img {
   .faq__ac .faq__ac-child {
     padding: 1rem;
   }
+}
+
+.faq__ac-parent.ac-hover {
+  color: #fff;
+  background-color: rgba(112, 112, 112, 0.8);
+  transition: .2s;
+  cursor: pointer;
 }
 
 .contact {
