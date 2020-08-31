@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="scss/base/destyle.css">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="scss/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
   <title>Document</title>
 </head>
 <body>
@@ -150,43 +152,62 @@
       <section>
         <div id="works" class="works">
           <h2 class="m-ttl works__ttl">制作実績</h2>
-          <div class="works__inner">
-            <ul class="works__carousel-contents">
-              <li class="works__carousel-list">
-                <p><img src="img/works1.png" alt=""></p>
-                <p>コーディングカンファレンスのイベントLPの制作を行いました！</p>
-                <dl>
-                  <dt>採用技術：</dt>
-                  <dd>jQuery,WordPress</dd>
-                  <dt>実装期間：</dt>
-                  <dd>4週間</dd>
-                  <dt>担当コーダー：</dt>
-                  <dd>石井</dd>
-                </dl>
+          <div class="works__inner swiper-container">
+            <ul class="works__carousel-contents swiper-wrapper">
+              <li class="works__carousel-list swiper-slide">
+                <p class="works___carousel-img"><img src="img/works2.png" alt=""></p>
+                <div class="works__carousel-txt">
+                  <p class="works__carousel-ttl">株式会社サンプル様採用サイトのコーディングを行いました！</p>
+                  <div class="works__carousel-about">
+                    <p>採用技術：jQuery,Bootstrap4</p>
+                    <p>実装期間：2週間</p>
+                    <p>担当コーダー：石井</p>
+                  </div>
+                </div>
               </li>
-              <li class="works__carousel-list">
-                <p><img src="img/works2.png" alt=""></p>
-                <p>株式会社サンプル様採用サイトのコーディングを行いました！</p>
-                <dl>
-                  <dt>採用技術：</dt>
-                  <dd>jQuery,Bootstrap4</dd>
-                  <dt>実装期間：</dt>
-                  <dd>2週間</dd>
-                  <dt>担当コーダー：</dt>
-                  <dd>石井</dd>
-                </dl>
+              <li class="works__carousel-list swiper-slide">
+                <p class="works___carousel-img"><img src="img/works1.png" alt=""></p>
+                <div class="works__carousel-txt">
+                  <p class="works__carousel-ttl">コーディングカンファレンスのイベントLPの制作を行いました！</p>
+                  <div class="works__carousel-about">
+                    <p>採用技術：jQuery,Bootstrap4</p>
+                    <p>実装期間：4週間</p>
+                    <p>担当コーダー：石井</p>
+                  </div>
+                </div>
               </li>
-              <li class="works__carousel-list">
-                <p><img src="img/works1.png" alt=""></p>
-                <p>株式会社サンプル様通販サイトのコーディングを行いました！</p>
-                <dl>
-                  <dt>採用技術：</dt>
-                  <dd>jQuery,Bootstrap4</dd>
-                  <dt>実装期間：</dt>
-                  <dd>6週間</dd>
-                  <dt>担当コーダー：</dt>
-                  <dd>石井</dd>
-                </dl>
+              <li class="works__carousel-list swiper-slide">
+                <p class="works___carousel-img"><img src="img/works2.png" alt=""></p>
+                <div class="works__carousel-txt">
+                  <p class="works__carousel-ttl">株式会社サンプル様採用サイトのコーディングを行いました！</p>
+                  <div class="works__carousel-about">
+                    <p>採用技術：jQuery,Bootstrap4</p>
+                    <p>実装期間：2週間</p>
+                    <p>担当コーダー：石井</p>
+                  </div>
+                </div>
+              </li>
+              <li class="works__carousel-list swiper-slide">
+                <p class="works___carousel-img"><img src="img/works3.png" alt=""></p>
+                <div class="works__carousel-txt">
+                  <p class="works__carousel-ttl">株式会社サンプル様通販サイトのコーディングを行いました！</p>
+                  <div class="works__carousel-about">
+                    <p>採用技術：jQuery,Bootstrap4</p>
+                    <p>実装期間：6週間</p>
+                    <p>担当コーダー：石井</p>
+                  </div>
+                </div>
+              </li>
+              <li class="works__carousel-list swiper-slide">
+                <p class="works___carousel-img"><img src="img/works2.png" alt=""></p>
+                <div class="works__carousel-txt">
+                  <p class="works__carousel-ttl">株式会社サンプル様採用サイトのコーディングを行いました！</p>
+                  <div class="works__carousel-about">
+                    <p>採用技術：jQuery,Bootstrap4</p>
+                    <p>実装期間：2週間</p>
+                    <p>担当コーダー：石井</p>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
@@ -215,7 +236,42 @@
     <small>&copy; ユアコーディング, All Rights Reserved.</small>
   </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
   <script type="text/javascript" src="hover.js"></script>
+  <script>
+    var mainSlide = new Swiper('.swiper-container', {
+      // ここにオプションを追加していく
+      slidesPerView: 1.5,
+      breakpoints: {
+        // 480px以上の場合
+        480: {
+          spaceBetween: 20,
+        },
+        // 600px以上の場合
+        600: {
+          spaceBetween: 40,
+        },
+        // 780px以上の場合
+        780: {
+          slidesPerView: 3.5,
+          spaceBetween: 20,
+        },
+        // 1000px以上の場合
+        1000: {
+          slidesPerView: 3.5,
+          spaceBetween: 40,
+        },
+      },
+      centeredSlides: true,
+      spaceBetween: 10,
+      initialSlide: 1,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: true
+      },
+    })
+  </script>
 </body>
 </html>

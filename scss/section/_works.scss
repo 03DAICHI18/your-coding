@@ -1,0 +1,55 @@
+.works {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  padding: rem(70) 0 rem(90);
+
+  &__ttl {
+    position: relative;
+    text-align: center;
+    margin-bottom: rem(100);
+  }
+
+  &__ttl::after {
+    content: "WORKS";
+    position: absolute;
+    top: rem(50);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: rem(16);
+    color: $subFont-color;
+  }
+
+  .works__carousel-list {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    .works___carousel-img {
+      height: rem(200);
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .works__carousel-txt {
+      padding: rem(20) rem(10) rem(30);
+
+      .works__carousel-ttl {
+        margin-bottom: rem(20);
+      }
+
+      .works__carousel-about {
+        display: inline-block;
+        font-size: rem(14);
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+// swiper.js
+.swiper-container {
+  width: 100vw;
+  max-width: rem(1500);
+  height: rem(400);
+}
