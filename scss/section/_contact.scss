@@ -1,4 +1,133 @@
 .contact {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  padding: rem(70) 0;
   background: rgb(5, 165, 250);
   background: linear-gradient(90deg, rgba(5, 165, 250, 1) 0%, rgba(99, 251, 215, 1) 100%);
+
+  &__ttl {
+    position: relative;
+    text-align: center;
+    margin-bottom: rem(70);
+    color: #fff;
+  }
+
+  &__ttl::after {
+    content: "CONTACT";
+    position: absolute;
+    top: rem(50);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: rem(16);
+    color: #fff;
+  }
+
+  &__subttl {
+    text-align: center;
+    color: #fff;
+    margin-bottom: rem(40);
+  }
+
+  .form {
+    max-width: rem(900);
+    margin: 0 auto;
+    padding: rem(40) rem(70) rem(70);
+    background-color: #fff;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
+
+    &__item {
+      margin-bottom: rem(30);
+
+      .form__label {
+        display: block;
+        margin-bottom: rem(20);
+
+        .form--required {
+          margin-left: rem(25);
+          padding: rem(4) rem(16);
+          font-size: rem(14);
+          color: #fff;
+          background-color: #0C449B;
+          border-radius: 10px;
+        }
+      }
+
+      .form__input {
+        display: block;
+        background-color: #EEFBFB;
+        border: 1px solid #E5E5E5;
+        border-radius: 5px;
+      }
+
+      .form__input-txt {
+        width: 70%;
+        height: rem(40);
+      }
+
+      .form__input-txtarea {
+        width: 100%;
+        height: rem(180);
+      }
+    }
+
+    &__btn {
+      width: 100%;
+
+      .m-btn {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@include mq(pc) {
+  .contact {
+    padding: rem(70) rem(30);
+  }
+}
+
+@include mq(tab) {
+  .contact {
+    .form {
+      padding: rem(40) rem(30) rem(70);
+
+      &__item {
+        .form__label {
+          .form--required {
+            margin-left: rem(10);
+            padding: rem(4) rem(12);
+          }
+        }
+
+        .form__input-txt {
+          width: 100%;
+          height: rem(40);
+        }
+      }
+    }
+  }
+}
+
+@include mq(sp) {
+  .contact {
+    padding: rem(70) rem(16);
+
+    .form {
+      padding: rem(40) rem(20) rem(70);
+
+      &__item {
+        .form__label {
+          .form--required {
+            margin-left: rem(10);
+            padding: rem(4) rem(12);
+          }
+        }
+
+        .form__input-txt {
+          width: 100%;
+          height: rem(40);
+        }
+      }
+    }
+  }
 }
