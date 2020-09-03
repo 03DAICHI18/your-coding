@@ -22,6 +22,7 @@
   .works__carousel-list {
     border: 1px solid #ddd;
     border-radius: 5px;
+    transition: .2s;
 
     .works___carousel-img {
       height: rem(200);
@@ -44,6 +45,11 @@
         line-height: 1.5;
       }
     }
+  }
+
+  .works__carousel-list:hover {
+    opacity: .7;
+    cursor: pointer;
   }
 }
 
