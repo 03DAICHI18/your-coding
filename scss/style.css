@@ -957,6 +957,16 @@ img {
   }
 }
 
+.end-message {
+  text-align: center;
+  display: none;
+}
+
+.false-message {
+  text-align: center;
+  display: none;
+}
+
 .footer {
   width: 100%;
   padding: 2.8125rem 0;
