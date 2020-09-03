@@ -145,6 +145,7 @@ img {
 
 @media screen and (max-width: 1000px) {
   .header {
+    height: 5rem;
     padding: 0 1.875rem;
     z-index: 3;
     /***** 真ん中のバーガー線 *****/
@@ -152,6 +153,7 @@ img {
     /***** メニューオープン時 *****/
   }
   .header .header__inner {
+    height: 5rem;
     /***** メニューオープン時位置0にして画面内に *****/
   }
   .header .header__inner .m-btn {
@@ -185,7 +187,7 @@ img {
   }
   .header .header__inner .header__nav-in.open {
     position: absolute;
-    top: 6.0625rem;
+    top: 5rem;
   }
   .header .hamburger-btn {
     display: block;
@@ -249,10 +251,10 @@ img {
 @media screen and (max-width: 480px) {
   .header {
     padding: 0 1rem;
-    height: 4.375rem;
+    height: 3.75rem;
   }
   .header .header__inner {
-    height: 4.375rem;
+    height: 3.75rem;
   }
   .header .header__inner .site__ttl {
     font-size: 1.25rem;
@@ -267,7 +269,7 @@ img {
   }
   .header .header__inner .header__nav-in.open {
     position: absolute;
-    top: 4.375rem;
+    top: 3.75rem;
   }
 }
 

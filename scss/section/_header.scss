@@ -54,10 +54,13 @@
 
 @include mq(pc) {
   .header {
+    height: rem(80);
     padding: 0 rem(30);
     z-index: 3;
 
     .header__inner {
+      height: rem(80);
+
       .m-btn {
         display: none;
       }
@@ -95,7 +98,7 @@
       /***** メニューオープン時位置0にして画面内に *****/
       .header__nav-in.open {
         position: absolute;
-        top: rem(97);
+        top: rem(80);
       }
     }
 
@@ -176,10 +179,10 @@
 @include mq(sp) {
   .header {
     padding: 0 rem(16);
-    height: rem(70);
+    height: rem(60);
 
     .header__inner {
-      height: rem(70);
+      height: rem(60);
 
       .site__ttl {
         font-size: rem(20);
@@ -197,7 +200,7 @@
 
       .header__nav-in.open {
         position: absolute;
-        top: rem(70);
+        top: rem(60);
       }
     }
   }
