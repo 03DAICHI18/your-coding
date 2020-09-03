@@ -175,6 +175,7 @@
 
 @include mq(sp) {
   .header {
+    padding: 0 rem(16);
     height: rem(70);
 
     .header__inner {

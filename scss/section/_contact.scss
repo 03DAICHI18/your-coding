@@ -94,6 +94,7 @@
         margin: 0 auto;
       }
 
+      // 非活性の時は半透明に
       .m-btn:disabled {
         opacity: .5;
       }
@@ -159,6 +160,15 @@
           width: 100%;
           height: rem(40);
         }
+      }
+
+      .privacypolicy {
+        font-size: rem(14);
+      }
+
+      .form__privacy {
+        font-size: rem(14);
+        text-align: center;
       }
     }
   }
