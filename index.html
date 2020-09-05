@@ -111,7 +111,7 @@
       </section>
       <section>
         <div id="faq" class="faq">
-          <h2 class="m-ttl faq__ttl scrollreveal">よくある質問</h2>
+          <h2 class="m-ttl faq__ttl">よくある質問</h2>
           <dl class="faq__ac scrollreveal">
             <dt class="faq__ac-parent">デザインから一貫してお願いすることは可能でしょうか</dt>
             <dd class="faq__ac-child">ユアコーディングはコーディングに特化したサービスですので、デザインからお受けすることは基本的にありません。<br>ただデザインを行う際は提携しているデザイナーと連携して対応させていただきますので、別途ご連絡ください。
@@ -126,7 +126,7 @@
       </section>
       <section>
         <div id="blog" class="blog">
-          <h2 class="m-ttl blog__ttl scrollreveal">ブログ</h2>
+          <h2 class="m-ttl blog__ttl">ブログ</h2>
           <div class="blog__inner scrollreveal">
             <article class="blog__card">
               <p class="blog__card-img"><img src="img/blog1.png" alt=""></p>
@@ -154,7 +154,7 @@
       </section>
       <section>
         <div id="works" class="works">
-          <h2 class="m-ttl works__ttl scrollreveal">制作実績</h2>
+          <h2 class="m-ttl works__ttl">制作実績</h2>
           <div class="works__inner swiper-container">
             <ul class="works__carousel-contents swiper-wrapper">
               <li class="works__carousel-list swiper-slide">
@@ -218,7 +218,7 @@
       </section>
       <section>
         <div id="contact" class="contact">
-          <h2 class="m-ttl contact__ttl scrollreveal">お問い合わせ</h2>
+          <h2 class="m-ttl contact__ttl">お問い合わせ</h2>
           <p class="contact__subttl scrollreveal">コーディングの人出が足りないとき、<br>あなたの力になります</p>
           <div class="form">
             <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdCYUtmn6v4B9uNdTlbiOgkKfvK1Z7CeKSZuOcLuMoLUJldew/formResponse" method="post" id="form" class="scrollreveal">
@@ -262,9 +262,9 @@
   <script type="text/javascript" src="contact/js/mailform-js.php"></script>
 
   <script>
+    // swiper.js
     var mainSlide = new Swiper('.swiper-container', {
-      // ここにオプションを追加していく
-      slidesPerView: 1.5,
+      spaceBetween: 10,
       breakpoints: {
         // 480px以上の場合
         480: {
@@ -285,8 +285,8 @@
           spaceBetween: 40,
         },
       },
+      slidesPerView: 1.5,
       centeredSlides: true,
-      spaceBetween: 10,
       initialSlide: 1,
       loop: true,
       autoplay: {
@@ -294,10 +294,12 @@
         disableOnInteraction: true
       },
     })
+
+    // ScrollReveal.js
     ScrollReveal().reveal('.scrollreveal', {
-      delay: 500,
-      opacity: '.3',
-      distance: '15px',
+      delay: 300,
+      opacity: '.5',
+      distance: '30px',
       origin: 'bottom'
     });
   </script>
